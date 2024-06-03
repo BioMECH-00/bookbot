@@ -2,7 +2,9 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     word_count = get_book_word_count(text)
-    letter_count = get_book_character_count(book_path)
+    print(word_count)
+    letter_count = get_book_character_count(text)
+    print(letter_count)
 
 
    
@@ -15,8 +17,7 @@ def get_book_word_count(text):
     words = text.split()
     return len(words)
 
-def get_book_character_count(path):
-    text = get_book_text(path)
+def get_book_character_count(text):
     lowered_text = text.lower()
     words = lowered_text.split()
     letter_dict = {}
